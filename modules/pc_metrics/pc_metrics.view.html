@@ -1,0 +1,248 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="row">
+                <!-- Heading row -->
+                <div class="col-sm-6 heading">Total Calls</div>
+                <div class="col-sm-6 heading">Sales Conversion</div>
+
+            </div>
+            <!-- Heading row closed-->
+
+            <div class="row">
+                <!-- Heading row  details-->
+                <div class="col-sm-6 heading-details">
+                    <div class="row">
+                        <div class="col-sm-12">Total Call: {{totalCall}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div zingchart id="chart-4" zc-json="totalcalRecd" zc-width="600" zc-height="350"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 heading-details">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-sm-12">Total Conversion: {{totalcoversion}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- dropdown div -->
+                                <div class="dropdown">
+                                    <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Show By
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                        <a href="javascript:void(0);" ng-click="channelClick('By Channel')">By Channel</a>
+                                        </li>
+                                   
+                                        <li>
+                                        <a href="javascript:void(0);" ng-click="channelClick('By Agent')">By Agent</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br><br>
+                            </div>
+                            <!-- dropdown div closed-->
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <div zingchart id="chart-2" zc-json="totalConJson" zc-width="600" zc-height="350"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12 heading">Sale By Region</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 heading-details">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <!-- dropdown div -->
+                            <div class="dropdown">
+                                <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Show By
+                        <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0);" ng-click="RegionClick('Region')">By Region</a></li>
+                                    <li><a href="javascript:void(0);" ng-click="RegionClick('country')">By Country</a></li>
+                                </ul>
+                            </div>
+                            <br><br>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <!-- dropdown div closed-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div zingchart id="chart-1" zc-json="mainJson" zc-width="1000" zc-height="350"></div>
+                    </div>
+                    <div class="col-sm-3">
+
+                        <div class="col-sm-8" style="border: 1px solid rgba(223, 224, 172, 0.96);">
+                            <div class="list_head">{{Topic}} </div>
+                            <span ng-repeat="ar in l1  track by $index">{{ar}}<br></span>
+                        </div>
+                        <div class="col-sm-4" style="border: 1px solid rgba(223, 224, 172, 0.96);">
+                            <div class="list_head">Count</div>
+                            <span ng-repeat="ar1 in l2  track by $index">{{ar1}}<br></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <!-- Heading row -->
+                <div class="col-sm-12 heading">Total Conversion : Unit Count/Calls (Channel/By Agent)</div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- dropdown div -->
+                    <span class="dropdown">	
+                           <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Show By
+                           <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" ng-click="unitClick('Channel')">By Channel</a></li>
+                        <li><a href="javascript:void(0);" ng-click="unitClick('Agent')">By Agent</a></li>
+                    </ul>
+                    </span>
+
+                    <br><br>
+                </div>
+
+
+                <!-- dropdown div closed-->
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div zingchart id="chart-3" zc-json="Agent_sale1" zc-width="1000" zc-height="350"></div>
+                </div>
+
+                <div class="col-sm-3">
+
+                        <div class="col-sm-8" style="border: 1px solid rgba(223, 224, 172, 0.96);">
+                            <div class="list_head">{{UnitTopic}} </div>
+                            <span ng-repeat="ar in l3  track by $index">{{ar}}<br></span>
+                        </div>
+                        <div class="col-sm-4" style="border: 1px solid rgba(223, 224, 172, 0.96);">
+                            <div class="list_head">Count</div>
+                            <span ng-repeat="ar4 in l4  track by $index">{{ar4}}<br></span>
+                        </div>
+
+                    </div>
+
+
+
+            </div>
+
+
+            <h3 class="row" style="    margin-bottom: 81px;    text-align: -webkit-center;">
+                By &nbsp; {{unitShowBy}}
+            </h3>
+
+
+        </div>
+    </div>
+    <div class="row">   
+    <!-- 2nd main row -->  
+    <div class="col-sm-12">
+      <div class="row">    
+        <!-- Heading row -->
+        <div class="col-sm-4 heading">Sales Conversion
+        </div>
+        <div class="col-sm-4 heading">Total Cancelled Sales
+        </div>
+        <div class="col-sm-4 heading">Total Activations
+        </div>
+      </div>
+    </div>
+   </div>
+
+    <div class="row">   
+      <!-- Heading row  details-->
+      <div class="col-sm-4 heading-details">  <!-- column start -->
+        
+            <div class="row">
+                <div class="col-sm-12">
+                 <b class="count">{{totalCount}}</b>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Sort By</h5>
+                    <button class=" dropdown-toggle btn btn-default" type="button" ng-click="agentCount(agent)">Agent
+                                      </button>
+                    <button class=" dropdown-toggle btn btn-default" type="button" ng-click="channelCount()">Channel
+                                      </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                <line-chart options="dataToSend"></line-chart>
+                </div>
+            </div>
+
+        </div>         <!-- column closed -->
+    
+        <div class="col-sm-4 heading-details">    <!-- column start -->
+
+          <div class="row">
+            <div class="col-sm-12">
+             <b class="count">{{cancellationCount}}</b>
+            </div>
+         </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+        <line-chart options="databyStateCancellation"></line-chart>
+        </div>
+      </div>
+
+        </div>                                    <!-- column closed --> 
+
+        <div class="col-sm-4 heading-details">     <!-- column start -->
+
+          <div class="row">
+            <div class="col-sm-12">
+             <b class="count">{{activationCount}}</b>
+            </div>
+         </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+        <line-chart options="databyStateActivation"></line-chart>
+        </div>
+      </div>
+
+        </div>                                      <!-- column closed -->
+          
+    </div>    
+    <!-- 2nd main row -->
+  </div>
+
+</div>
+
+

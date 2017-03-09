@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      
+      
+      <script type="text/javascript" src="js/jquery.min.js"></script>  
+      <script src="css/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/angular.js"></script>
+      
+
+      <script type="text/javascript" src = "js/zingchart.min.js"></script> 
+      
+      <script src="js/angular-route.js"></script>
+      
+      <script type="text/javascript" src = "app.module.js"></script>
+      <script type="text/javascript" src="js/highcharts.js"></script>
+
+      <!-- directive -->
+      <script type="text/javascript" src="directive/line_chart/line_chart.directive.js"></script> 
+      <script type="text/javascript" src = "modules/app.module.page.js"></script>
+      <script type="text/javascript" src = "service/dataservice.js"></script>
+      <script type="text/javascript" src = "routConfig.js"></script> 
+      <!-- contoller -->
+      <script type="text/javascript" src = "modules/pc_metrics/pc_metrics.controller.js"></script>
+      <script type="text/javascript" src = "modules/financial_metrics/financial_metrics.controller.js"></script>
+      <script type="text/javascript" src = "modules/partner_metrics/partner_metrics.controller.js"></script>
+      <script type="text/javascript" src = "modules/transfer_metrics/transfer_metrics.controller.js"></script>
+      <script type="text/javascript" src = "js/zingchart-angularjs.js"></script>
+
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css">
+
+ 
+      
+
+   </head>
+   <body ng-app= "dcs.dashboard">
+      <div class ="container-fluid">
+         
+               <div class="row">
+                  <div class = "col-sm-12">
+                     <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                           <div class="navbar-header">
+                              <a class="navbar-brand" >Dcs Dashboard</a>
+                           </div>
+                           <ul class="nav navbar-nav">
+                              <li><a href="#/">P/C Metrics</a></li>
+                              <li><a href="#transfer">Transfer Metrics</a></li>
+                              <li><a href="#financial">Financial Metrics</a></li>
+                              <li><a href="#partner">Partner Metrics</a></li>
+                              
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class = "col-sm-12">
+                     <div ng-view></div>
+                  </div>
+               </div>
+            </div>
+
+         
+   </body>
+</html>

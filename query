@@ -1,0 +1,26 @@
+"SELECT count(DISPOSITION) FROM Sheet0$ where DISPOSITION  IS NOT NULL And DISPOSITION !='-' And DISPOSITION !=''"
+
+
+2.Sale conversion by agent 
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT distinct [AGENT NAME ] 
+FROM [Dashboard_db].[dbo].[Sheet0$] where [AGENT NAME ] IS NOT NULL And [AGENT NAME ] !='-' And [AGENT NAME ] !=''
+
+
+
+
+
+ by channel  
+
+ /****** Script for SelectTopNRows command from SSMS  ******/
+SELECT distinct [CAMPAIGN ] 
+
+  FROM [Dashboard_db].[dbo].[Sheet0$] where [CAMPAIGN ] IS NOT NULL And [CAMPAIGN ] !='-' And [CAMPAIGN ] !='' 
+
+
+total conversion :
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT  [DISPOSITION ] FROM [Dashboard_db].[dbo].[Sheet0$] where  [DISPOSITION ] Like '%sold%'
+
+

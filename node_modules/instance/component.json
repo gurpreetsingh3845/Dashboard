@@ -1,0 +1,14 @@
+{
+  "name": "instance",
+  "repo": "vesln/instance",
+  "description": "Tiny instance helper",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "development": {
+    "chaijs/chai": "*"
+  }
+}
